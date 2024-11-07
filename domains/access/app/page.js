@@ -11,6 +11,8 @@ import Brands from "../../../components/Brands";
 import Promo from "../../../components/Promo";
 import Contact from "../../../components/Contact";
 
+import Debug from "./(components)/Debug";
+
 const schema = {
   "@context": "https://schema.org",
   "@graph": [
@@ -146,14 +148,23 @@ const Page = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
       />
+      <Debug componentName="Page" />
       <Hero />
+      <Debug componentName="After Hero" />
       <Services />
+      <Debug componentName="After Services" />
       <CTAMain />
+      <Debug componentName="After CTAMain" />
       <IsRight />
+      <Debug componentName="After IsRight" />
       <Solutions />
+      <Debug componentName="After Solutions" />
       <Testimonials />
+      <Debug componentName="After Testimonials" />
       <Brands />
+      <Debug componentName="After Brands" />
       <CTAFull />
+      <Debug componentName="After CTAFull" />
       <Promo
         h2="We Deliver the Best Quality"
         p="Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, perferendis nisi enim perspiciatis voluptatem voluptatum!"
