@@ -1,13 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export const metadata = {
   title: "Request a Quote",
-  description: "Use the form below to provide us with all relevant information to quickly and efficiently process your enquiry.",
-  
+  description:
+    "Use the form below to provide us with all relevant information to quickly and efficiently process your enquiry.",
+
   openGraph: {
     title: "Request a Quote",
-    description: "Request a quote for Microsoft Office consulting services and solutions from Office Experts Group.",
+    description:
+      "Request a quote for Microsoft Office consulting services and solutions from Office Experts Group.",
     url: "https://www.officeexperts.com.au/contact-us/request-a-quote/",
     siteName: "Office Experts Group",
     images: [
@@ -15,8 +17,8 @@ export const metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo"
-      }
+        alt: "Office Experts Group Logo",
+      },
     ],
     locale: "en-AU",
     type: "website",
@@ -26,12 +28,11 @@ export const metadata = {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
     title: "Request a Quote - Office Experts Group",
-    description: "Request a quote for Microsoft Office consulting services and solutions.",
+    description:
+      "Request a quote for Microsoft Office consulting services and solutions.",
     images: ["/logo.png"],
   },
 
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
   canonical: "https://www.officeexperts.com.au/contact-us/request-a-quote/",
   robots: {
     index: true,
@@ -45,13 +46,11 @@ export const metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
-  }
+  },
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <>{children}</>
-  );
+  return <>{children}</>;
 }
 
 RootLayout.propTypes = {

@@ -68,8 +68,7 @@ export const metadata = {
   },
 
   // Additional tags
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
+
   canonical:
     "https://www.officeexperts.com.au/services/microsoft-excel/vba-macro-development/",
   robots: {

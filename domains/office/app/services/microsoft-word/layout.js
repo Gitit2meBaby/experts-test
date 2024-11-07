@@ -1,15 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
   title: "Microsoft Word Services | Word Experts Australia",
-  description: "Professional Microsoft Word consulting services specializing in templates, document design, forms, accessibility and corporate solutions across Australia.",
-  
+  description:
+    "Professional Microsoft Word consulting services specializing in templates, document design, forms, accessibility and corporate solutions across Australia.",
+
   // OpenGraph
   openGraph: {
     title: "Microsoft Word Services",
-    description: "Professional Microsoft Word consulting services specializing in templates, document design, forms, accessibility and corporate solutions across Australia.",
+    description:
+      "Professional Microsoft Word consulting services specializing in templates, document design, forms, accessibility and corporate solutions across Australia.",
     url: "https://www.officeexperts.com.au/services/microsoft-word/",
     siteName: "Office Experts Group",
     images: [
@@ -17,8 +19,8 @@ export const metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo"
-      }
+        alt: "Office Experts Group Logo",
+      },
     ],
     locale: "en-AU",
     type: "website",
@@ -32,32 +34,32 @@ export const metadata = {
     "corporate Word templates",
     "Word document solutions",
     "Word accessibility services",
-    
+
     // Location-based
     "Word consultants Sydney",
     "Word experts Melbourne",
     "Word specialists Brisbane",
     "Word consultants Perth",
-    
+
     // Service-specific long tail
     "Word VBA development",
     "Word form creation",
     "Word document automation",
     "Word corporate branding",
     "Word template conversion",
-    
+
     // Industry-specific
     "government Word solutions",
     "corporate Word templates",
     "enterprise Word consulting",
     "business Word automation",
-    
+
     // Feature-specific
     "Word popup forms",
     "Word quick parts",
     "Word document accessibility",
     "Word custom toolbars",
-    "Word template migration"
+    "Word template migration",
   ],
 
   // Twitter Card
@@ -65,13 +67,13 @@ export const metadata = {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
     title: "Microsoft Word Services",
-    description: "Professional Microsoft Word consulting services specializing in templates, document design, forms, accessibility and corporate solutions across Australia.",
+    description:
+      "Professional Microsoft Word consulting services specializing in templates, document design, forms, accessibility and corporate solutions across Australia.",
     images: ["/logo.png"],
   },
 
   // Additional tags
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
+
   canonical: "https://www.officeexperts.com.au/services/microsoft-word/",
   robots: {
     index: true,
@@ -86,13 +88,11 @@ export const metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
-  }
+  },
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <>{children}</>
-  );
+  return <>{children}</>;
 }
 
 RootLayout.propTypes = {

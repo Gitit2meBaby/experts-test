@@ -41,8 +41,6 @@ export const metadata = {
     "business automation excel",
   ],
   canonical: "https://www.excelexperts.com.au/custom-design-and-development/",
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
   robots: {
     index: true,
     follow: true,

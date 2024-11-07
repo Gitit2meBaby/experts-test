@@ -60,8 +60,6 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
   canonical:
     "https://www.powerplatformexperts.com.au/services/microsoft-power-platform/microsoft-power-automate/",
   robots: {

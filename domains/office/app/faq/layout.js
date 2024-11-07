@@ -1,13 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export const metadata = {
   title: "Frequently Asked Questions",
-  description: "Common questions about our Microsoft Office consulting services, including Excel, Word, PowerPoint, Access, and Office 365 solutions.",
-  
+  description:
+    "Common questions about our Microsoft Office consulting services, including Excel, Word, PowerPoint, Access, and Office 365 solutions.",
+
   openGraph: {
     title: "Frequently Asked Questions",
-    description: "Find answers to common questions about our Microsoft Office consulting services and solutions.",
+    description:
+      "Find answers to common questions about our Microsoft Office consulting services and solutions.",
     url: "https://www.officeexperts.com.au/faq/",
     siteName: "Office Experts Group",
     images: [
@@ -15,8 +17,8 @@ export const metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo"
-      }
+        alt: "Office Experts Group Logo",
+      },
     ],
     locale: "en-AU",
     type: "website",
@@ -28,42 +30,41 @@ export const metadata = {
     "Microsoft Office support questions",
     "Office 365 migration FAQ",
     "Excel consulting questions",
-    
+
     // Solution-specific
     "PowerPoint template FAQ",
     "Excel automation questions",
     "Access database FAQ",
     "Word template support",
-    
+
     // Location-based
     "Microsoft consultants Australia FAQ",
     "Office experts Sydney questions",
     "Melbourne Excel consulting FAQ",
     "Brisbane Office support",
-    
+
     // Service-related
     "remote Office support",
     "onsite consulting services",
     "Office training questions",
     "Microsoft solution pricing",
-    
+
     // Technical
     "VBA development FAQ",
     "Office integration questions",
     "custom Office solutions",
-    "Microsoft automation support"
+    "Microsoft automation support",
   ],
 
   twitter: {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
     title: "Frequently Asked Questions",
-    description: "Find answers to common questions about our Microsoft Office consulting services and solutions.",
+    description:
+      "Find answers to common questions about our Microsoft Office consulting services and solutions.",
     images: ["/logo.png"],
   },
 
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
   canonical: "https://www.officeexperts.com.au/faq/",
   robots: {
     index: true,
@@ -77,15 +78,11 @@ export const metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
-  }
+  },
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <>
-      {children}
-    </>
-  );
+  return <>{children}</>;
 }
 
 RootLayout.propTypes = {

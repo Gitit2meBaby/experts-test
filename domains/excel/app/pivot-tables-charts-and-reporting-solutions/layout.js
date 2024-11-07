@@ -50,8 +50,6 @@ export const metadata = {
     ],
   },
 
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
   canonical:
     "https://www.excelexperts.com.au/pivot-tables-charts-and-reporting-solutions/",
 

@@ -1,15 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
   title: "Excel Custom Design and Development | Excel Development Services",
-  description: "Professional Excel custom design and development services across Australia. Specializing in custom workbooks, VBA development, and Excel integration solutions.",
-  
+  description:
+    "Professional Excel custom design and development services across Australia. Specializing in custom workbooks, VBA development, and Excel integration solutions.",
+
   // OpenGraph
   openGraph: {
     title: "Excel Custom Design and Development Services",
-    description: "Professional Excel custom design and development services across Australia. Specializing in custom workbooks, VBA development, and Excel integration solutions.",
+    description:
+      "Professional Excel custom design and development services across Australia. Specializing in custom workbooks, VBA development, and Excel integration solutions.",
     url: "https://www.officeexperts.com.au/services/microsoft-excel/custom-design-and-development/",
     siteName: "Office Experts Group",
     images: [
@@ -17,8 +19,8 @@ export const metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo"
-      }
+        alt: "Office Experts Group Logo",
+      },
     ],
     locale: "en-AU",
     type: "website",
@@ -32,27 +34,27 @@ export const metadata = {
     "Excel VBA development",
     "Excel programming services",
     "Excel integration solutions",
-    
+
     // Feature-specific
     "custom Excel workbooks",
     "Excel template development",
     "Excel data manipulation",
     "Excel reporting solutions",
     "Excel macro development",
-    
+
     // Integration-focused
     "Excel third party integration",
     "Excel SQL integration",
     "Excel Azure integration",
     "Excel Office integration",
     "Excel database connection",
-    
+
     // Business solutions
     "Excel business automation",
     "Excel process automation",
     "Excel workflow solutions",
     "Excel business solutions",
-    "Excel efficiency tools"
+    "Excel efficiency tools",
   ],
 
   // Twitter Card
@@ -60,14 +62,15 @@ export const metadata = {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
     title: "Excel Custom Design and Development Services",
-    description: "Professional Excel custom design and development services across Australia. Specializing in custom workbooks, VBA development, and Excel integration solutions.",
+    description:
+      "Professional Excel custom design and development services across Australia. Specializing in custom workbooks, VBA development, and Excel integration solutions.",
     images: ["/logo.png"],
   },
 
   // Additional tags
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
-  canonical: "https://www.officeexperts.com.au/services/microsoft-excel/custom-design-and-development/",
+
+  canonical:
+    "https://www.officeexperts.com.au/services/microsoft-excel/custom-design-and-development/",
   robots: {
     index: true,
     follow: true,
@@ -81,13 +84,11 @@ export const metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
-  }
+  },
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <>{children}</>
-  );
+  return <>{children}</>;
 }
 
 RootLayout.propTypes = {

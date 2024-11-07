@@ -1,15 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "PowerPoint Training | PowerPoint Assistance | PowerPoint Help | PowerPoint Experts",
-  description: "Expert PowerPoint training and assistance services. Get professional guidance on creating effective presentations with our PowerPoint specialists.",
-  
+  title:
+    "PowerPoint Training | PowerPoint Assistance | PowerPoint Help | PowerPoint Experts",
+  description:
+    "Expert PowerPoint training and assistance services. Get professional guidance on creating effective presentations with our PowerPoint specialists.",
+
   // OpenGraph
   openGraph: {
     title: "PowerPoint Training & Assistance Services",
-    description: "Professional PowerPoint training and assistance services. Get expert guidance on creating effective presentations from our PowerPoint specialists.",
+    description:
+      "Professional PowerPoint training and assistance services. Get expert guidance on creating effective presentations from our PowerPoint specialists.",
     url: "https://www.officeexperts.com.au/services/microsoft-powerpoint/powerpoint-user-training-and-assistance/",
     siteName: "Office Experts Group",
     images: [
@@ -17,8 +20,8 @@ export const metadata = {
         url: "https://www.officeexperts.com.au/wp-content/uploads/2023/09/microsoft-office-experts-group-logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo"
-      }
+        alt: "Office Experts Group Logo",
+      },
     ],
     locale: "en-AU",
     type: "article",
@@ -32,31 +35,31 @@ export const metadata = {
     "PowerPoint help Australia",
     "PowerPoint guidance services",
     "PowerPoint expert training",
-    
+
     // Location-based
     "PowerPoint training Sydney",
     "PowerPoint assistance Melbourne",
     "PowerPoint help Brisbane",
     "PowerPoint training Perth",
-    
+
     // Service-specific long tail
     "corporate PowerPoint training",
     "professional PowerPoint guidance",
     "PowerPoint presentation training",
     "PowerPoint template assistance",
     "PowerPoint design help",
-    
+
     // Industry-specific
     "business PowerPoint training",
     "corporate PowerPoint assistance",
     "enterprise PowerPoint help",
     "professional PowerPoint guidance",
-    
+
     // Training combinations
     "PowerPoint design training",
     "PowerPoint template guidance",
     "PowerPoint creation assistance",
-    "PowerPoint skills development"
+    "PowerPoint skills development",
   ],
 
   // Twitter Card
@@ -64,14 +67,17 @@ export const metadata = {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
     title: "PowerPoint Training & Assistance Services",
-    description: "Professional PowerPoint training and assistance services. Get expert guidance on creating effective presentations from our PowerPoint specialists.",
-    images: ["https://www.officeexperts.com.au/wp-content/uploads/2023/09/microsoft-office-experts-group-logo.png"],
+    description:
+      "Professional PowerPoint training and assistance services. Get expert guidance on creating effective presentations from our PowerPoint specialists.",
+    images: [
+      "https://www.officeexperts.com.au/wp-content/uploads/2023/09/microsoft-office-experts-group-logo.png",
+    ],
   },
 
   // Additional tags
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
-  canonical: "https://www.officeexperts.com.au/services/microsoft-powerpoint/powerpoint-user-training-and-assistance/",
+
+  canonical:
+    "https://www.officeexperts.com.au/services/microsoft-powerpoint/powerpoint-user-training-and-assistance/",
   robots: {
     index: true,
     follow: true,
@@ -85,15 +91,11 @@ export const metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
-  }
+  },
 };
 
 export default function RootLayout({ children }) {
-  return (
-      <>
-        {children}
-      </>
-  );
+  return <>{children}</>;
 }
 
 RootLayout.propTypes = {

@@ -1,15 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
   title: "Exchange Online Setup and Support",
-  description: "Professional Exchange Online setup and email management services. Expert assistance with business email configuration, domain setup, and Office 365 integration.",
-  
+  description:
+    "Professional Exchange Online setup and email management services. Expert assistance with business email configuration, domain setup, and Office 365 integration.",
+
   // OpenGraph
   openGraph: {
     title: "Exchange Online Setup and Support",
-    description: "Professional Exchange Online setup and email management services. Expert assistance with business email configuration, domain setup, and Office 365 integration.",
+    description:
+      "Professional Exchange Online setup and email management services. Expert assistance with business email configuration, domain setup, and Office 365 integration.",
     url: "https://www.officeexperts.com.au/services/microsoft-office-365/exchange-online-setup-and-support/",
     siteName: "Office Experts Group",
     images: [
@@ -17,8 +19,8 @@ export const metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo"
-      }
+        alt: "Office Experts Group Logo",
+      },
     ],
     locale: "en-AU",
     type: "website",
@@ -33,31 +35,31 @@ export const metadata = {
     "Exchange migration services",
     "Exchange 365 support",
     "Exchange Online experts",
-    
+
     // Specific services
     "shared inbox setup",
     "custom email addresses",
     "email forwarding configuration",
     "business domain email",
     "professional email setup",
-    
+
     // Location-based
     "Exchange setup Sydney",
     "Exchange experts Melbourne",
     "Exchange migration Brisbane",
     "email setup Perth",
-    
+
     // Integration/Migration
     "Office 365 email migration",
     "Exchange Online integration",
     "email system upgrade",
     "business email migration",
-    
+
     // Business-specific
     "corporate email setup",
     "enterprise email configuration",
     "business email branding",
-    "company email management"
+    "company email management",
   ],
 
   // Twitter Card
@@ -65,14 +67,15 @@ export const metadata = {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
     title: "Exchange Online Setup and Support",
-    description: "Professional Exchange Online setup and email management services. Expert assistance with business email configuration, domain setup, and Office 365 integration.",
+    description:
+      "Professional Exchange Online setup and email management services. Expert assistance with business email configuration, domain setup, and Office 365 integration.",
     images: ["/logo.png"],
   },
 
   // Additional tags
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
-  canonical: "https://www.officeexperts.com.au/services/microsoft-office-365/exchange-online-setup-and-support/",
+
+  canonical:
+    "https://www.officeexperts.com.au/services/microsoft-office-365/exchange-online-setup-and-support/",
   robots: {
     index: true,
     follow: true,
@@ -86,13 +89,11 @@ export const metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
-  }
+  },
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <>{children}</>
-  );
+  return <>{children}</>;
 }
 
 RootLayout.propTypes = {

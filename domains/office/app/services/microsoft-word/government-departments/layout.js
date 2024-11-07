@@ -68,8 +68,6 @@ export const metadata = {
     images: ["/logo.png"],
   },
 
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
   canonical:
     "https://www.wordexperts.com.au/services/microsoft-word/government-departments/",
   robots: {

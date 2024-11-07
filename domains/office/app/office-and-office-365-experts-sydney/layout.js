@@ -74,8 +74,7 @@ export const metadata = {
   },
 
   // Additional tags
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
+
   canonical:
     "https://www.officeexperts.com.au/office-and-office-365-experts-sydney/",
   robots: {

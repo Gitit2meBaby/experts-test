@@ -27,7 +27,6 @@ export const metadata = {
     "https://www.officeexperts.com.au/wp-content/uploads/2023/09/microsoft-office-experts-group-logo.png",
   robots:
     "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1",
-  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({ children }) {

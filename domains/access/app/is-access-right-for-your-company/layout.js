@@ -80,8 +80,6 @@ export const metadata = {
   },
 
   // Additional tags
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
   canonical:
     "https://www.accessexperts.com.au/is-access-right-for-your-company/",
   robots: {

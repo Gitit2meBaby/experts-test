@@ -1,15 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
-  title: "PowerPoint Consulting Services | PowerPoint Design | PowerPoint Experts",
-  description: "Expert Microsoft PowerPoint consulting services in Australia. Specializing in custom templates, presentation design, automation and training.",
-  
+  title:
+    "PowerPoint Consulting Services | PowerPoint Design | PowerPoint Experts",
+  description:
+    "Expert Microsoft PowerPoint consulting services in Australia. Specializing in custom templates, presentation design, automation and training.",
+
   // OpenGraph
   openGraph: {
     title: "PowerPoint Experts Group",
-    description: "Expert Microsoft PowerPoint consulting services in Australia. Specializing in custom templates, presentation design, automation and training.",
+    description:
+      "Expert Microsoft PowerPoint consulting services in Australia. Specializing in custom templates, presentation design, automation and training.",
     url: "https://www.officeexperts.com.au/services/microsoft-powerpoint/",
     siteName: "Office Experts Group",
     images: [
@@ -17,8 +20,8 @@ export const metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo"
-      }
+        alt: "Office Experts Group Logo",
+      },
     ],
     locale: "en-AU",
     type: "website",
@@ -32,31 +35,31 @@ export const metadata = {
     "PowerPoint template creation",
     "PowerPoint VBA automation",
     "PowerPoint training services",
-    
+
     // Location-based
     "PowerPoint consultants Sydney",
     "PowerPoint experts Melbourne",
     "PowerPoint services Brisbane",
     "PowerPoint specialists Perth",
-    
+
     // Service-specific
     "corporate PowerPoint templates",
     "PowerPoint master slides",
     "PowerPoint presentation redesign",
     "PowerPoint automation solutions",
     "PowerPoint user training",
-    
+
     // Industry-specific
     "corporate presentation design",
     "business PowerPoint solutions",
     "enterprise PowerPoint consulting",
     "professional presentation services",
-    
+
     // Technical combinations
     "PowerPoint VBA development",
     "PowerPoint data integration",
     "PowerPoint template automation",
-    "PowerPoint brand compliance"
+    "PowerPoint brand compliance",
   ],
 
   // Twitter Card
@@ -64,12 +67,11 @@ export const metadata = {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
     title: "PowerPoint Experts Group",
-    description: "Expert Microsoft PowerPoint consulting services in Australia. Specializing in custom templates, presentation design, automation and training.",
+    description:
+      "Expert Microsoft PowerPoint consulting services in Australia. Specializing in custom templates, presentation design, automation and training.",
     images: ["/logo.png"],
   },
 
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
   canonical: "https://www.officeexperts.com.au/services/microsoft-powerpoint/",
   robots: {
     index: true,
@@ -83,13 +85,11 @@ export const metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
-  }
+  },
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <>{children}</>
-  );
+  return <>{children}</>;
 }
 
 RootLayout.propTypes = {

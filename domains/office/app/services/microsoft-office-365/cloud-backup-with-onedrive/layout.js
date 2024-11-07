@@ -1,15 +1,17 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 export const metadata = {
   // Basic metadata
   title: "OneDrive Cloud Backup | OneDrive for Business | Office 365",
-  description: "Expert OneDrive cloud storage and backup solutions for businesses. Comprehensive OneDrive implementation, migration, and support services across Australia.",
-  
+  description:
+    "Expert OneDrive cloud storage and backup solutions for businesses. Comprehensive OneDrive implementation, migration, and support services across Australia.",
+
   // OpenGraph
   openGraph: {
     title: "OneDrive Cloud Backup Solutions",
-    description: "Professional OneDrive cloud storage and backup solutions for businesses. Expert implementation and support across Australia.",
+    description:
+      "Professional OneDrive cloud storage and backup solutions for businesses. Expert implementation and support across Australia.",
     url: "https://www.officeexperts.com.au/services/microsoft-office-365/cloud-backup-with-onedrive/",
     siteName: "Office Experts Group",
     images: [
@@ -17,8 +19,8 @@ export const metadata = {
         url: "/logo.png",
         width: 1200,
         height: 630,
-        alt: "Office Experts Group Logo"
-      }
+        alt: "Office Experts Group Logo",
+      },
     ],
     locale: "en-AU",
     type: "website",
@@ -32,32 +34,32 @@ export const metadata = {
     "OneDrive implementation",
     "OneDrive migration services",
     "OneDrive support Australia",
-    
+
     // Device-specific
     "OneDrive iPhone backup",
     "OneDrive Android sync",
     "OneDrive Windows backup",
     "OneDrive Mac integration",
     "OneDrive tablet sync",
-    
+
     // Service-specific long tail
     "OneDrive business file sharing",
     "OneDrive data protection",
     "OneDrive file sync solutions",
     "OneDrive storage management",
     "OneDrive backup automation",
-    
+
     // Business-focused
     "corporate cloud storage",
     "business file backup",
     "enterprise cloud solutions",
     "secure file sharing",
-    
+
     // Integration keywords
     "Office 365 cloud backup",
     "SharePoint OneDrive integration",
     "Microsoft cloud storage",
-    "cross-platform cloud backup"
+    "cross-platform cloud backup",
   ],
 
   // Twitter Card
@@ -65,14 +67,15 @@ export const metadata = {
     card: "summary_large_image",
     site: "@OfficeExpertsG1",
     title: "OneDrive Cloud Backup Solutions",
-    description: "Professional OneDrive cloud storage and backup solutions for businesses. Expert implementation and support across Australia.",
+    description:
+      "Professional OneDrive cloud storage and backup solutions for businesses. Expert implementation and support across Australia.",
     images: ["/logo.png"],
   },
 
   // Additional tags
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
-  canonical: "https://www.officeexperts.com.au/services/microsoft-office-365/cloud-backup-with-onedrive/",
+
+  canonical:
+    "https://www.officeexperts.com.au/services/microsoft-office-365/cloud-backup-with-onedrive/",
   robots: {
     index: true,
     follow: true,
@@ -86,13 +89,11 @@ export const metadata = {
     icon: "/favicon.ico",
     shortcut: "/favicon-32x32.png",
     apple: "/apple-touch-icon.png",
-  }
+  },
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <>{children}</>
-  );
+  return <>{children}</>;
 }
 
 RootLayout.propTypes = {
