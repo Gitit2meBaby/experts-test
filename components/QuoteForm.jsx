@@ -51,6 +51,8 @@ const QuoteForm = () => {
   };
 
   const handleFileChange = (event) => {
+    if (typeof window === "undefined") return;
+
     const file = event.target.files[0];
     if (!file) return;
 

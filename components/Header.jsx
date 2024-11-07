@@ -2,26 +2,41 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 import styles from "../../../../styles/header.module.css";
 import MobileNav from "./MobileNav";
-
 import logo from "../../../../public/logo300x130.webp";
 
 const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [currentDomain, setCurrentDomain] = useState("");
 
   useEffect(() => {
+    // Set initial domain
+    if (typeof window !== "undefined") {
+      setCurrentDomain(window.location.hostname);
+    }
+
+    // Handle scroll
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      if (typeof window !== "undefined") {
+        setIsScrolled(window.scrollY > 10);
+      }
     };
 
-    // Add the event listener
-    window.addEventListener("scroll", handleScroll);
+    // Add scroll listener only on client
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      // Initial check
+      handleScroll();
+    }
 
-    // Cleanup the event listener on component unmount
-    return () => window.removeEventListener("scroll", handleScroll);
+    // Cleanup
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
   }, []);
 
   const handleMouseEnter = (dropdown) => {

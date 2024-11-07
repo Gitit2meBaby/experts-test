@@ -4,23 +4,27 @@ import styles from "../styles/cookieConsent.module.css";
 
 const CookieConsent = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    const consentChoice = localStorage.getItem("cookieConsent");
-
-    if (!consentChoice) {
-      setIsVisible(true);
-    }
-
-    if (consentChoice === "accepted") {
-      initializeAnalytics();
+    setIsClient(true);
+    if (typeof window !== "undefined") {
+      const consentChoice = localStorage.getItem("cookieConsent");
+      if (!consentChoice) {
+        setIsVisible(true);
+      }
+      if (consentChoice === "accepted") {
+        initializeAnalytics();
+      }
     }
   }, []);
 
   const initializeAnalytics = () => {
-    if (typeof window !== "undefined" && !window.GA_INITIALIZED) {
-      window.GA_INITIALIZED = true;
+    if (typeof window === "undefined" || window.GA_INITIALIZED) return;
 
+    window.GA_INITIALIZED = true;
+
+    try {
       const gtmScript = document.createElement("script");
       gtmScript.defer = true;
       gtmScript.src = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`;
@@ -38,21 +42,28 @@ const CookieConsent = () => {
 
       document.head.appendChild(gtmScript);
       document.head.appendChild(initScript);
+    } catch (error) {
+      console.error("Failed to initialize analytics:", error);
     }
   };
 
   const handleAccept = () => {
-    localStorage.setItem("cookieConsent", "accepted");
-    initializeAnalytics();
-    setIsVisible(false);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("cookieConsent", "accepted");
+      initializeAnalytics();
+      setIsVisible(false);
+    }
   };
 
   const handleDecline = () => {
-    localStorage.setItem("cookieConsent", "declined");
-    setIsVisible(false);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("cookieConsent", "declined");
+      setIsVisible(false);
+    }
   };
 
-  if (!isVisible) return null;
+  // Don't render anything on server
+  if (!isClient || !isVisible) return null;
 
   return (
     <div className={styles.container}>

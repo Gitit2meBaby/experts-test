@@ -11,14 +11,19 @@ const AnimateOnScroll = ({
   duration = 0.6,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
   const elementRef = useRef(null);
-  const lastScrollY = useRef(window.scrollY);
+  const lastScrollY = useRef(0);
   const wasAboveViewport = useRef(false);
   const wasBelowViewport = useRef(false);
 
   useEffect(() => {
+    // Initialize scroll position
+    setScrollY(window?.scrollY || 0);
+    lastScrollY.current = window?.scrollY || 0;
+
     const handleScroll = () => {
-      if (!elementRef.current) return;
+      if (!elementRef.current || typeof window === "undefined") return;
 
       const element = elementRef.current;
       const rect = element.getBoundingClientRect();
@@ -27,26 +32,24 @@ const AnimateOnScroll = ({
       const currentScrollY = window.scrollY;
       const isScrollingDown = currentScrollY > lastScrollY.current;
 
-      // Update scroll direction tracking
+      // Update scroll tracking
+      setScrollY(currentScrollY);
       lastScrollY.current = currentScrollY;
 
-      // Check if element is completely above viewport
+      // Check viewport position
       if (rect.bottom < 0) {
         wasAboveViewport.current = true;
         wasBelowViewport.current = false;
         setIsVisible(false);
       }
 
-      // Check if element is completely below viewport
       if (rect.top > windowHeight) {
         wasBelowViewport.current = true;
         wasAboveViewport.current = false;
         setIsVisible(false);
       }
 
-      // Trigger animation when element comes into view
       if (rect.top <= triggerPoint && rect.bottom >= 0) {
-        // When scrolling down, animate if element was below viewport or first time
         if (
           isScrollingDown &&
           (wasBelowViewport.current ||
@@ -56,7 +59,6 @@ const AnimateOnScroll = ({
           wasBelowViewport.current = false;
         }
 
-        // When scrolling up, animate if element was above viewport
         if (!isScrollingDown && wasAboveViewport.current) {
           setIsVisible(true);
           wasAboveViewport.current = false;
@@ -64,9 +66,8 @@ const AnimateOnScroll = ({
       }
     };
 
-    // Set initial scroll position and check initial state
+    // Safe window check
     if (typeof window !== "undefined") {
-      lastScrollY.current = window.scrollY;
       window.addEventListener("scroll", handleScroll, { passive: true });
       handleScroll(); // Initial check
     }

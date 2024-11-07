@@ -5,12 +5,14 @@ import styles from "../styles/scrollBtn.module.css";
 const ScrollBtn = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    setIsClient(true);
     let ticking = false;
 
     const handleScroll = () => {
-      if (!ticking) {
+      if (!ticking && typeof window !== "undefined") {
         window.requestAnimationFrame(() => {
           const currentScrollPos = window.scrollY;
           // Check if scrolling down
@@ -27,16 +29,30 @@ const ScrollBtn = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll);
+      // Initial check
+      handleScroll();
+    }
+
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
   }, [scrollPosition]);
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    if (typeof window !== "undefined") {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
   };
+
+  // Don't render during SSR
+  if (!isClient) return null;
 
   return (
     <button

@@ -9,20 +9,31 @@ const MobileNav = () => {
   const [currentDomain, setCurrentDomain] = useState("");
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [navigationHistory, setNavigationHistory] = useState(["main"]);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && !currentDomain) {
+    // Mark as client-side
+    setIsClient(true);
+
+    // Set domain only on client
+    if (typeof window !== "undefined") {
       setCurrentDomain(window.location.hostname);
     }
-  }, [currentDomain]);
+  }, []);
 
+  // Don't render anything during SSR
+  if (!isClient) {
+    return null;
+  }
+
+  // Rest of your component logic stays the same
   const handleViewTransition = (newView) => {
     setIsTransitioning(true);
     setTimeout(() => {
       setCurrentView(newView);
       setNavigationHistory((prev) => [...prev, newView]);
       setIsTransitioning(false);
-    }, 300); // Match this with CSS transition duration
+    }, 300);
   };
 
   const handleBack = () => {
