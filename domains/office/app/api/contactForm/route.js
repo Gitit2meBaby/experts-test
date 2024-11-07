@@ -4,6 +4,20 @@ import { getEmailSignature } from "@/utils/emailSignature";
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export async function POST(req) {
+  if (!process.env.SENDGRID_API_KEY) {
+    // Return success response in test/dev environment
+    return new Response(
+      JSON.stringify({
+        success: true,
+        message: "Test mode - SendGrid not configured",
+      }),
+      {
+        headers: { "Content-Type": "application/json" },
+        status: 200,
+      }
+    );
+  }
+
   try {
     const body = await req.json();
     const { name, email, phone, message, honeypot } = body;
