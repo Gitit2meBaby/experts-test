@@ -70,3 +70,11 @@
 2024-11-07T12:10:08.086874Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Other("@experts/office"), path: AnchoredSystemPathBuf("domains/office") }: FileChanged { file: AnchoredSystemPathBuf("domains/office/app/services/microsoft-powerpoint/powerpoint-user-training-and-assistance/layout.js") }, WorkspacePackage { name: Other("@experts/powerplatform"), path: AnchoredSystemPathBuf("domains/powerPlatform") }: FileChanged { file: AnchoredSystemPathBuf("domains/powerPlatform/app/services/microsoft-power-platform/microsoft-power-pages/layout.js") }}))
 2024-11-07T12:10:08.086904Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
 2024-11-07T12:10:08.087060Z  WARN turborepo_lib::package_changes_watcher: hashes are the same, no need to rerun
+2024-11-07T12:36:42.323959Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("staticwebapp.config.json")}
+2024-11-07T12:36:42.324009Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }: FileChanged { file: AnchoredSystemPathBuf("staticwebapp.config.json") }}))
+2024-11-07T12:36:50.718120Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("staticwebapp.config.json")}
+2024-11-07T12:36:50.718138Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }: FileChanged { file: AnchoredSystemPathBuf("staticwebapp.config.json") }}))
+2024-11-07T13:08:15.720073Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("package.json")}
+2024-11-07T13:08:15.720094Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(All(DefaultGlobalFileChanged { file: AnchoredSystemPathBuf("package.json") }))
+2024-11-07T13:08:50.899086Z  WARN turborepo_lib::package_changes_watcher: changed_files: {AnchoredSystemPathBuf("package-lock.json")}
+2024-11-07T13:08:50.899105Z  WARN turborepo_lib::package_changes_watcher: changed_packages: Ok(Some({WorkspacePackage { name: Root, path: AnchoredSystemPathBuf("") }: FileChanged { file: AnchoredSystemPathBuf("package-lock.json") }}))
