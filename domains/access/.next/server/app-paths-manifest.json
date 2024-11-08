@@ -6,12 +6,12 @@
   "/page": "app/page.js",
   "/3rd-party-product-integration/page": "app/3rd-party-product-integration/page.js",
   "/access-online/page": "app/access-online/page.js",
-  "/upgrades-and-migration/page": "app/upgrades-and-migration/page.js",
-  "/client-testimonials/page": "app/client-testimonials/page.js",
-  "/is-access-right-for-your-company/page": "app/is-access-right-for-your-company/page.js",
-  "/access-azure-cloud-based-solutions/page": "app/access-azure-cloud-based-solutions/page.js",
   "/access-support/page": "app/access-support/page.js",
   "/contact-us/page": "app/contact-us/page.js",
+  "/access-azure-cloud-based-solutions/page": "app/access-azure-cloud-based-solutions/page.js",
+  "/client-testimonials/page": "app/client-testimonials/page.js",
+  "/upgrades-and-migration/page": "app/upgrades-and-migration/page.js",
   "/meet-the-team/page": "app/meet-the-team/page.js",
+  "/is-access-right-for-your-company/page": "app/is-access-right-for-your-company/page.js",
   "/contact-us/request-a-quote/page": "app/contact-us/request-a-quote/page.js"
 }
